@@ -2,6 +2,7 @@
 import skilstak.colors as c
 import math
 
+print(c.base2 + "Ryan Densmore's U5L1 Number Guesser\n")
 print(c.green + "Hey, what's the range? Format it as 'x-y'")
 startrange = input(c.cyan + '> ' + c.red).split('-')
 
