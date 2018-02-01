@@ -7,7 +7,7 @@ print(c.blue + 'Think of a number, and let me guess it!')
 print(c.green + "What's the range of numbers it's in? Format it as 'x-y'")
 startrange = input(c.cyan + '> ' + c.red).split('-')
 
-if startrange[1] < startrange[0]:
+if int(startrange[1]) < int(startrange[0]):
     print(c.red + "Wrong Format!")
     print(c.magenta + 'Reload to play again!')
     exit()
