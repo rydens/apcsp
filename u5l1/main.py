@@ -3,8 +3,14 @@ import skilstak.colors as c
 import math
 
 print(c.base2 + "Ryan Densmore's U5L1 Number Guesser\n")
-print(c.green + "Hey, what's the range? Format it as 'x-y'")
+print(c.blue + 'Think of a number, and let me guess it!')
+print(c.green + "What's the range of numbers it's in? Format it as 'x-y'")
 startrange = input(c.cyan + '> ' + c.red).split('-')
+
+if startrange[1] < startrange[0]:
+    print(c.red + "Wrong Format!")
+    print(c.magenta + 'Reload to play again!')
+    exit()
 
 guesses = 0
 
@@ -17,7 +23,7 @@ while True:
         exit()
 
     
-    print(c.green + 'Is your number higher or lower? Or even correct!?')
+    print(c.green + 'Is your number ' + c.cyan + 'higher ' + c.green + 'or' + c.cyan + ' lower' + c.green + '? Or even ' + c.cyan + 'correct' + c.green + '!?')
     print(median)
     answer = input(c.cyan + '> ' + c.red).lower()
     if answer == 'higher':
